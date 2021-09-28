@@ -4,15 +4,12 @@
 
 
 ## *Platform:*
------------------- 
     Windows Desktop alkalmazás
 
 ## *Nyelv:* 
---------------
     Java
 
 ## *Műfaj:*
-----------------------
     ügyességi játék
 
 

@@ -1,0 +1,7 @@
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="javafx.scene.Parent"><rhs name\="javafx.scene.Group"/></lhs><lhs name\="javafx.scene.Node"><rhs name\="javafx.scene.Group"/><rhs name\="javafx.scene.image.ImageView"/></lhs><lhs name\="javafx.event.EventTarget"><rhs name\="javafx.scene.Group"/><rhs name\="javafx.scene.image.ImageView"/></lhs><lhs name\="javafx.css.Styleable"><rhs name\="javafx.scene.Group"/><rhs name\="javafx.scene.image.ImageView"/></lhs><lhs name\="javafx.scene.Group"><rhs name\="javafx.scene.Group"/></lhs><lhs name\="javafx.scene.paint.Paint"><rhs name\="javafx.scene.paint.Color"/></lhs><lhs name\="javafx.scene.image.Image"><rhs name\="javafx.scene.image.Image"/></lhs><lhs name\="javafx.scene.image.ImageView"><rhs name\="javafx.scene.image.ImageView"/></lhs><lhs name\="javafx.fxml.FXMLLoader"><rhs name\="javafx.fxml.FXMLLoader"/></lhs><lhs name\="application.Scene2Controller"><rhs name\="application.Scene2Controller"/></lhs></history>
+content_assist_number_of_computers=13
+eclipse.preferences.version=1
+org.eclipse.jdt.ui.formatterprofiles.version=20
+spelling_locale_initialized=true
+useAnnotationsPrefPage=true
+useQuickDiffPrefPage=true

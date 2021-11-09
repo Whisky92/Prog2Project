@@ -6,10 +6,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="408.0" prefWidth="582.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="408.0" prefWidth="582.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
    <children>
-      <Label fx:id="myLabel" layoutX="259.0" layoutY="14.0" prefHeight="27.0" prefWidth="82.0" text="Welcome" textAlignment="CENTER">
+      <Label fx:id="myLabel" alignment="CENTER" layoutX="2.0" layoutY="14.0" prefHeight="3.0" prefWidth="575.0" text="Welcome" textAlignment="CENTER">
          <font>
             <Font size="18.0" />
          </font>
@@ -20,6 +19,6 @@
          </font>
       </Label>
       <TextField fx:id="myTextField" layoutX="226.0" layoutY="138.0" />
-      <Button fx:id="myButton" layoutX="274.0" layoutY="245.0" mnemonicParsing="false" text="submit" />
+      <Button fx:id="myButton" layoutX="274.0" layoutY="245.0" mnemonicParsing="false" onAction="#submit" text="submit" />
    </children>
 </AnchorPane>

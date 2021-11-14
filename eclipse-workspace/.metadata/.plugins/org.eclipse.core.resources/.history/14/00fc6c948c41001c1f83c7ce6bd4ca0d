@@ -1,0 +1,10 @@
+package scenes;
+
+public class Scenes {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

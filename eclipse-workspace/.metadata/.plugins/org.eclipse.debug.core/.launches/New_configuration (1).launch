@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
     <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
-        <listEntry value="/ImageV/src/application/Main.java"/>
+        <listEntry value="/Scenes/src/scenes/Scenes.java"/>
     </listAttribute>
     <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
         <listEntry value="1"/>
@@ -10,8 +10,8 @@
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_SHOW_CODEDETAILS_IN_EXCEPTION_MESSAGES" value="true"/>
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_CLASSPATH_ONLY_JAR" value="false"/>
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_START_ON_FIRST_THREAD" value="true"/>
-    <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="application.Main"/>
-    <stringAttribute key="org.eclipse.jdt.launching.MODULE_NAME" value="ImageV"/>
-    <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="ImageV"/>
+    <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="scenes.Scenes"/>
+    <stringAttribute key="org.eclipse.jdt.launching.MODULE_NAME" value="Scenes"/>
+    <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="Scenes"/>
     <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="--module-path &quot;D:\Desktop\fx\javafx-sdk-17.0.1\lib&quot; --add-modules javafx.controls,javafx.fxml"/>
 </launchConfiguration>

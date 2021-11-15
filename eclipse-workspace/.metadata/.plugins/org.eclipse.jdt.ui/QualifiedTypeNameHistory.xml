@@ -21,13 +21,17 @@
     <fullyQualifiedTypeName name="javafx.stage.Stage"/>
     <fullyQualifiedTypeName name="checkbox.CheckBox"/>
     <fullyQualifiedTypeName name="javafx.scene.control.CheckBox"/>
+    <fullyQualifiedTypeName name="javafx.scene.control.ChoiceBox"/>
+    <fullyQualifiedTypeName name="javafx.beans.value.ChangeListener"/>
+    <fullyQualifiedTypeName name="javafx.beans.value.ObservableValue"/>
     <fullyQualifiedTypeName name="javafx.application.Application"/>
     <fullyQualifiedTypeName name="javafx.scene.Scene"/>
     <fullyQualifiedTypeName name="javafx.scene.control.Button"/>
     <fullyQualifiedTypeName name="javafx.scene.layout.VBox"/>
     <fullyQualifiedTypeName name="javafx.geometry.Insets"/>
-    <fullyQualifiedTypeName name="javafx.scene.control.ChoiceBox"/>
-    <fullyQualifiedTypeName name="javafx.beans.value.ChangeListener"/>
+    <fullyQualifiedTypeName name="javafx.scene.control.ComboBox"/>
+    <fullyQualifiedTypeName name="javafx.scene.control.ListView"/>
+    <fullyQualifiedTypeName name="javafx.scene.control.SelectionMode"/>
     <fullyQualifiedTypeName name="java.util.Observable"/>
-    <fullyQualifiedTypeName name="javafx.beans.value.ObservableValue"/>
+    <fullyQualifiedTypeName name="javafx.collections.ObservableList"/>
 </qualifiedTypeNameHistroy>

@@ -22,7 +22,6 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		
-		int sceneW=1920, sceneH=1015;
 		int labelX = 500, labelY=200;
 		int sButtonX=800, sButtonY=500;
 		int mButtonX=800, mButtonY= 625;
@@ -49,9 +48,9 @@ public class Main extends Application {
 		window.getIcons().add(icon);
 		window.setFullScreen(false);
 		
-		Font startFont = new Font("Times New Roman", labelSize);
+		Font startFont = new Font("Bernard MT Condensed", labelSize);
 		
-		primaryScene = new Scene(primaryLayout, sceneW, sceneH);
+		primaryScene = new Scene(primaryLayout, SceneParameters.SceneW, SceneParameters.SceneH);
 
 		window.setScene(primaryScene);
 		window.setTitle("Word Puzzle");	
@@ -63,7 +62,6 @@ public class Main extends Application {
 		startLabel.setLayoutX(labelX);
 		startLabel.setLayoutY(labelY);
 		startLabel.setFont(startFont);
-		
 		primaryLayout.getChildren().addAll(startLabel, startButton, madeByButton);
 		window.show();
 		
@@ -72,10 +70,15 @@ public class Main extends Application {
 			closeProgram();	
 		});
 		
+		startButton.setOnAction(e ->
+		{
+			UserName.display_UserName(window, primaryScene);
+		});
+		
 		madeByButton.setOnAction(e -> 
 		{
 			MadeBy.display_MadeBy(window, primaryScene);
-		});	
+		});
 		
 	}
 		

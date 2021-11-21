@@ -1,18 +1,19 @@
 package wordpuzzle;
 
 import javafx.scene.Group;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
-import javafx.stage.Stage;
+
 
 public class UserName {
 	
 	static String Name="";
 	
-	public static void display_UserName(Stage st, Scene sc)
+	public static void display_UserName(Scene sc, Parent p)
 	{
 		int labelX = 20, labelY=200;
 		int tfX=400, tfY=460;
@@ -41,16 +42,17 @@ public class UserName {
 		userNameButton.setLayoutY(buttonY);
 		userNameButton.setPrefSize(buttonW, buttonH);
 		
-		userNameLayout.getChildren().addAll(usernameLabel, userName_tf, userNameButton);
 		
-		Button userNameBack = SceneParameters.createBackButton(userNameLayout);
+		Button userNameBack = SceneParameters.createBackButton();
+		
+		userNameLayout.getChildren().addAll(usernameLabel, userName_tf, userNameButton, userNameBack);
+		
 		userNameBack.setOnAction(e -> {
 			Name="";
-			st.setScene(sc);
+			sc.setRoot(p);
 		});
 		
-		Scene userNameScene = new Scene(userNameLayout, SceneParameters.SceneW, SceneParameters.SceneH);
-		st.setScene(userNameScene);
+		sc.setRoot(userNameLayout);
 		
 		userNameButton.setOnAction(e -> {
 			String n = userName_tf.getText();
@@ -59,7 +61,7 @@ public class UserName {
 			}else {
 				Name=n;
 				usernameLabel.setText("Írd be a felhasználóneved a szövegmezőbe!");
-				Category.display_Category(st, userNameScene);
+				Category.display_Category(sc, userNameLayout);
 			}
 		});
 	}

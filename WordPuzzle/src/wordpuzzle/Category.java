@@ -4,6 +4,7 @@ import java.util.LinkedList;
 
 import javafx.collections.ObservableList;
 import javafx.scene.Group;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -11,16 +12,20 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.SelectionMode;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
-import javafx.stage.Stage;
 
 public class Category {
 	
 	private static ListView<Text> categoryLV = new ListView<>();
 	private static LinkedList<String> str = new LinkedList<>();
 	private static int count=0;
+	private static int zerocount = 0;
 	
-	public static void display_Category(Stage st, Scene sc)
+	public static void display_Category(Scene sc, Parent p)
 	{
+		Text message=new Text();
+		Group Category_layout = new Group();
+		String mesg="Jelenleg kiválasztva: ";
+		
 		int catLVW=1920, catLVH=270;
 		int catLVY=300;
 		int labelX=0, labelY=100;
@@ -40,7 +45,7 @@ public class Category {
 		
 		categoryLabel2.setLayoutX(label2X);
 		categoryLabel2.setLayoutY(label2Y);
-		Group Category_layout = new Group();
+
 		
 		Font LVFont = new Font("Times New Roman", 43);
 		
@@ -71,37 +76,29 @@ public class Category {
 		categoryButton.setLayoutY(buttonY);
 		categoryButton.setPrefSize(buttonW, buttonH);
 		
-		categoryButton.setOnAction(e -> {
-			buttonClicked();
-			count=0;
-			categoryLV.getSelectionModel().clearSelection();
-		});
 		
-		Button categoryBackButton= SceneParameters.createBackButton(Category_layout);
+		Button categoryBackButton= SceneParameters.createBackButton();
+		
+		
+		Category_layout.getChildren().addAll(categoryLabel,categoryLabel2,categoryLV,categoryButton, categoryBackButton);
+		
+		
+		sc.setRoot(Category_layout);
 		
 		categoryBackButton.setOnAction(e ->
-		{
+		{	
 			count=0;
-			st.setScene(sc);
+			sc.setRoot(p);
 			str.clear();
 			categoryLV.getSelectionModel().clearSelection();
-			
+			Category_layout.getChildren().clear();
 		});
-		
-		Category_layout.getChildren().addAll(categoryLabel,categoryLabel2,categoryLV,categoryButton);
-		
-		
-		
-		Scene categoryScene = new Scene(Category_layout, SceneParameters.SceneW, SceneParameters.SceneH);
-		st.setScene(categoryScene);
-		
 		
 		
 	categoryLV.setOnMouseClicked(e ->{
 		if(count>0)
 			Category_layout.getChildren().remove(5);
 		else count++;
-		Text message=new Text();
 		message.setFont(new Font("Times New Roman",40));
 		ObservableList<Text> movies;
 		movies = categoryLV.getSelectionModel().getSelectedItems();
@@ -121,6 +118,27 @@ public class Category {
 		message.setLayoutY(600);
 		Category_layout.getChildren().add(message);
 	}); 
+	
+	
+	categoryButton.setOnAction(e -> {
+		if (categoryLV.getSelectionModel().isEmpty())
+		{
+			categoryLabel.setText("Nem lettek kategóriák kiválasztva, válassz ki egy-kettőt közülük!");
+			zerocount++;
+		}	
+		else
+		{	if(zerocount>0)
+				categoryLabel.setText("Válaszd ki a kategóriát/ kategóriákat, amikből szavakat szeretnél!");
+			buttonClicked();
+			zerocount=0;
+			count=0;
+			categoryLV.getSelectionModel().clearSelection();
+			PuzzleSize.display_PuzzleSize(sc, Category_layout);
+			message.setText(mesg);
+			Category_layout.getChildren().remove(message);
+		}
+	});
+	
 
 		
 	}

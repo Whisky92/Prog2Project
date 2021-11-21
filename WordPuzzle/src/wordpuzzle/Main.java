@@ -72,12 +72,12 @@ public class Main extends Application {
 		
 		startButton.setOnAction(e ->
 		{
-			UserName.display_UserName(window, primaryScene);
+			UserName.display_UserName(primaryScene, primaryLayout);
 		});
 		
 		madeByButton.setOnAction(e -> 
 		{
-			MadeBy.display_MadeBy(window, primaryScene);
+			MadeBy.display_MadeBy(primaryScene, primaryLayout);
 		});
 		
 	}

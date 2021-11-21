@@ -1,15 +1,15 @@
 package wordpuzzle;
 
 import javafx.scene.Group;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
-import javafx.stage.Stage;
 
 public class MadeBy {
 	
-	public static void display_MadeBy(Stage st, Scene sc)
+	public static void display_MadeBy(Scene sc, Parent p)
 	{
 		int labelX1=550, labelX2=720, labelX3=750;
 		int labelY1=400, labelY2=550, labelY3=650;
@@ -35,18 +35,16 @@ public class MadeBy {
 		madeByText2.setFont(new Font("Times New Roman", labelSize2));
 		madeByText3.setFont(new Font("Times New Roman", labelSize2));
 		
+		Button madeByBack =SceneParameters.createBackButton();
 		
-		madeByLayout.getChildren().addAll(madeByText1, madeByText2, madeByText3);		
-		
-		Button madeByBack =SceneParameters.createBackButton(madeByLayout);
+		madeByLayout.getChildren().addAll(madeByText1, madeByText2, madeByText3, madeByBack);	
 		
 		madeByBack.setOnAction(e -> 
 		{
-			st.setScene(sc);
+			sc.setRoot(p);
 		});
 		
-		Scene madeByScene= new Scene(madeByLayout, SceneParameters.SceneW, SceneParameters.SceneH);
-		st.setScene(madeByScene);
+		sc.setRoot(madeByLayout);
 		
 		
 		

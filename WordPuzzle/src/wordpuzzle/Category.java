@@ -16,7 +16,7 @@ import javafx.scene.text.Text;
 public class Category {
 	
 	private static ListView<Text> categoryLV = new ListView<>();
-	private static LinkedList<String> str = new LinkedList<>();
+	public static LinkedList<String> str = new LinkedList<>();
 	private static int count=0;
 	private static int zerocount = 0;
 	

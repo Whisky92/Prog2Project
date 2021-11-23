@@ -17,8 +17,8 @@ public class MadeBy {
 		
 		Group madeByLayout= new Group();
 		
-		Text madeByText1=new Text("KÈszÌtette:");
-		Text madeByText2=new Text("Ol·h Tam·s");
+		Text madeByText1=new Text("K√©sz√≠tette:");
+		Text madeByText2=new Text("Ol√°h Tam√°s");
 		Text madeByText3=new Text("NE5E1M");
 		
 		madeByText1.setLayoutX(labelX1);

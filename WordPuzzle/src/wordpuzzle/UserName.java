@@ -62,6 +62,7 @@ public class UserName {
 				Name=n;
 				usernameLabel.setText("Írd be a felhasználóneved a szövegmezőbe!");
 				Category.display_Category(sc, userNameLayout);
+				userName_tf.setText("Felhasznalo");
 			}
 		});
 	}

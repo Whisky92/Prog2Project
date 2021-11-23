@@ -12,7 +12,7 @@ public class SceneParameters {
 		int buttonW=300, buttonH=100;
 		int buttonX=800, buttonY=800;
 	
-		Button back = new Button("Vissza az elözö oldalra");
+		Button back = new Button("Vissza az elÅ‘zÅ‘ oldalra");
 		back.setLayoutX(buttonX);
 		back.setLayoutY(buttonY);
 		back.setPrefSize(buttonW, buttonH);

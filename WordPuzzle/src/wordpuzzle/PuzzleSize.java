@@ -72,12 +72,13 @@ public class PuzzleSize {
 						if(PuzzleSize_layout.getChildren().contains(puzzleSizeLabel2))
 							PuzzleSize_layout.getChildren().remove(puzzleSizeLabel2);
 					}else {	
-					size=number;
-					if(puzzleSizeLabel1.getLayoutX()!=label1X)
-						puzzleSizeLabel1.setLayoutX(label1X);
-					if(puzzleSizeLabel1.getText()!="Írd be a szövegmezőbe,")
-						puzzleSizeLabel1.setText("Írd be a szövegmezőbe,");
-					if(!PuzzleSize_layout.getChildren().contains(puzzleSizeLabel2))
+						size=number;
+						Puzzle.display_Puzzle(sc, PuzzleSize_layout);
+						if(puzzleSizeLabel1.getLayoutX()!=label1X)
+							puzzleSizeLabel1.setLayoutX(label1X);
+						if(puzzleSizeLabel1.getText()!="Írd be a szövegmezőbe,")
+							puzzleSizeLabel1.setText("Írd be a szövegmezőbe,");
+						if(!PuzzleSize_layout.getChildren().contains(puzzleSizeLabel2))
 							PuzzleSize_layout.getChildren().add(puzzleSizeLabel2);
 					}
 				}else {
@@ -89,11 +90,11 @@ public class PuzzleSize {
 				}
 				
 			}else {
-			puzzleSizeLabel1.setText("Számot adjon meg a szövegmezőben!");
-			if(puzzleSizeLabel1.getLayoutX()!=300)
-				puzzleSizeLabel1.setLayoutX(300);
-			if(PuzzleSize_layout.getChildren().contains(puzzleSizeLabel2))
-				PuzzleSize_layout.getChildren().remove(puzzleSizeLabel2);
+				puzzleSizeLabel1.setText("Számot adjon meg a szövegmezőben!");
+				if(puzzleSizeLabel1.getLayoutX()!=300)
+					puzzleSizeLabel1.setLayoutX(300);
+				if(PuzzleSize_layout.getChildren().contains(puzzleSizeLabel2))
+					PuzzleSize_layout.getChildren().remove(puzzleSizeLabel2);
 			
 			}
 			}else {
@@ -108,6 +109,7 @@ public class PuzzleSize {
 		puzzleSizeBackButton.setOnAction( e -> {
 			 sc.setRoot(p);
 			 size=0;
+			 Category.str.clear();
 		});
 		
 	}

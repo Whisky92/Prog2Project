@@ -39,7 +39,7 @@ public class Main extends Application {
 		startButton.setPrefSize(ButtonW, ButtonH);
 		
 		
-		Button madeByButton = new Button("Készítette");
+		Button madeByButton = new Button("KÃ©szÃ­tette");
 		madeByButton.setLayoutX(mButtonX);
 		madeByButton.setLayoutY(mButtonY);
 		madeByButton.setPrefSize(ButtonW, ButtonH);
@@ -83,7 +83,7 @@ public class Main extends Application {
 	}
 		
 	public void closeProgram() {
-		boolean answer = ConfirmBox.display("Kilépés", "Tényleg ki akarsz lépni?");
+		boolean answer = ConfirmBox.display("KilÃ©pÃ©s", "TÃ©nyleg ki akarsz lÃ©pni?");
 		if(answer)
 			window.close();
 	}

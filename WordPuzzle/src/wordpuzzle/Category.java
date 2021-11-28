@@ -50,10 +50,10 @@ public class Category {
 		Font LVFont = new Font("Times New Roman", 43);
 		
 		Text cat1 = new Text("Gyümölcsök - zöldségek");
-		Text cat2 = new Text("Emlösök");
+		Text cat2 = new Text("Emlősök");
 		Text cat3 = new Text("Madarak");
-		Text cat4 = new Text("Bogarak");
-		Text cat5 = new Text("Növények");
+		Text cat4 = new Text("Folyók");
+		Text cat5 = new Text("Városok");
 		
 		cat1.setFont(LVFont);
 		cat2.setFont(LVFont);

@@ -64,7 +64,7 @@ public class PuzzleSize {
 				int number = Integer.parseInt(text);
 				if(NumbCheck.checkFirstChar(text))
 				{
-					if(number>15 || number < 5)
+					if(number > 15 || number < 8)
 					{
 					   if(puzzleSizeLabel1.getLayoutX()!=100)
 						  puzzleSizeLabel1.setLayoutX(100);

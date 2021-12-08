@@ -12,6 +12,7 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.SelectionMode;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 
 public class Category {
 	
@@ -20,7 +21,7 @@ public class Category {
 	private static int count=0;
 	private static int zerocount = 0;
 	
-	public static void display_Category(Scene sc, Parent p)
+	public static void display_Category(Stage win, Scene sc, Parent p)
 	{
 		Text message=new Text();
 		Group Category_layout = new Group();
@@ -133,7 +134,7 @@ public class Category {
 			zerocount=0;
 			count=0;
 			categoryLV.getSelectionModel().clearSelection();
-			PuzzleSize.display_PuzzleSize(sc, Category_layout);
+			PuzzleSize.display_PuzzleSize(win, sc, Category_layout);
 			message.setText(mesg);
 			Category_layout.getChildren().remove(message);
 		}

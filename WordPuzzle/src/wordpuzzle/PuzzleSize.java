@@ -7,12 +7,13 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Font;
+import javafx.stage.Stage;
 
 public class PuzzleSize {
 
 	public static int size = 0;
 	
-	public static void display_PuzzleSize(Scene sc, Parent p)
+	public static void display_PuzzleSize(Stage win, Scene sc, Parent p)
 	{
 		int label1X = 500, label1Y = 200;
 		int label2X = 100, label2Y = 300;
@@ -73,7 +74,7 @@ public class PuzzleSize {
 							PuzzleSize_layout.getChildren().remove(puzzleSizeLabel2);
 					}else {	
 						size=number;
-						Puzzle.display_Puzzle(sc, PuzzleSize_layout);
+						Puzzle.display_Puzzle(win, sc, PuzzleSize_layout);
 						if(puzzleSizeLabel1.getLayoutX()!=label1X)
 							puzzleSizeLabel1.setLayoutX(label1X);
 						if(puzzleSizeLabel1.getText()!="Írd be a szövegmezőbe,")

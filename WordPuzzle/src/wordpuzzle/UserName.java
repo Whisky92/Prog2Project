@@ -7,13 +7,14 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 
 
 public class UserName {
 	
 	static String Name="";
 	
-	public static void display_UserName(Scene sc, Parent p)
+	public static void display_UserName(Stage win, Scene sc, Parent p)
 	{
 		int labelX = 20, labelY=200;
 		int tfX=400, tfY=460;
@@ -61,7 +62,7 @@ public class UserName {
 			}else {
 				Name=n;
 				usernameLabel.setText("Írd be a felhasználóneved a szövegmezőbe!");
-				Category.display_Category(sc, userNameLayout);
+				Category.display_Category(win, sc, userNameLayout);
 				userName_tf.setText("Felhasznalo");
 			}
 		});

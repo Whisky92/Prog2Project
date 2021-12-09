@@ -8,7 +8,7 @@ public class Labels {
 	int idNumb;
 	int rowNumb;
 	int colNumb;
-	String isWord;
+	LabelType isWord;
 	
 	public Labels(Label l,int id, int rN, int cN)
 	{
@@ -16,7 +16,7 @@ public class Labels {
 		idNumb = id;
 		rowNumb = rN;
 		colNumb = cN;
-		isWord = "none";
+		isWord = LabelType.NONE;
 	}
 
 }

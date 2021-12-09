@@ -65,11 +65,11 @@ public class PuzzleSize {
 				int number = Integer.parseInt(text);
 				if(NumbCheck.checkFirstChar(text))
 				{
-					if(number > 15 || number < 8)
+					if(number > 15 || number < 11)
 					{
-					   if(puzzleSizeLabel1.getLayoutX()!=100)
-						  puzzleSizeLabel1.setLayoutX(100);
-						puzzleSizeLabel1.setText("A szám a megfelelő intervallumon kívül esik!");
+					   if(puzzleSizeLabel1.getLayoutX()!=0)
+						  puzzleSizeLabel1.setLayoutX(0);
+						puzzleSizeLabel1.setText("A szám a megfelelő intervallumon kívül esik! (11-15)");
 						if(PuzzleSize_layout.getChildren().contains(puzzleSizeLabel2))
 							PuzzleSize_layout.getChildren().remove(puzzleSizeLabel2);
 					}else {	

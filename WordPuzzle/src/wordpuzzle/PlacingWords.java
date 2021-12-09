@@ -54,15 +54,15 @@ public class PlacingWords {
 		for(int i=0; i<word.length();i++)
 		{
 			if(direction == 0) {
-				if(!Puzzle.array[x][y+i].isWord.equals("both")) {
+				if(Puzzle.array[x][y+i].isWord!=LabelType.BOTH) {
 					Puzzle.array[x][y+i].lab.setText(Character.toString(word.charAt(i)));
-					Puzzle.array[x][y+i].isWord="horizontal";
+					Puzzle.array[x][y+i].isWord=LabelType.HORIZONTAL;
 				}
 			}
 			else {
-				if(!Puzzle.array[x+i][y].isWord.equals("both")) {
+				if(Puzzle.array[x+i][y].isWord!=LabelType.BOTH) {
 					Puzzle.array[x+i][y].lab.setText(Character.toString(word.charAt(i)));
-					Puzzle.array[x+i][y].isWord="vertical";
+					Puzzle.array[x+i][y].isWord=LabelType.VERTICAL;
 				}
 			}
 			
@@ -75,36 +75,36 @@ public class PlacingWords {
 		for(int i=0; i<word.length();i++)
 		{
 			if(direction == 0) {
-				if(!Puzzle.array[x][y+i].isWord.equals("none"))
+				if(Puzzle.array[x][y+i].isWord!=LabelType.BOTH)
 				{	String s= Character.toString(word.charAt(i));
 					String s2 =Puzzle.array[x][y+i].lab.getText();
 					if(!s.equals(s2))
 						return true;
 					else
-						if(Puzzle.array[x][y+i].isWord.equals("horizontal") || Puzzle.array[x][y+i].isWord.equals("both"))
+						if(Puzzle.array[x][y+i].isWord==LabelType.HORIZONTAL || Puzzle.array[x][y+i].isWord==LabelType.BOTH)
 						{
 							return true;
 						}
 						else
 						{
-							Puzzle.array[x][y+i].isWord="both";
+							Puzzle.array[x][y+i].isWord=LabelType.BOTH;
 						}
 					
 				}
 			}
 			else {
-				if(!Puzzle.array[x+i][y].isWord.equals("none"))
+				if(Puzzle.array[x+i][y].isWord!=LabelType.NONE)
 				{
 					String s=Character.toString(word.charAt(i));
 					String s2 =Puzzle.array[x+i][y].lab.getText();
 					if(!s.equals(s2))
 						return true;
 					else
-						if(Puzzle.array[x+i][y].isWord.equals("vertical") || Puzzle.array[x+i][y].isWord.equals("both"))
+						if(Puzzle.array[x+i][y].isWord==LabelType.VERTICAL || Puzzle.array[x+i][y].isWord==LabelType.BOTH)
 						{
 							return true;
 						}else {
-							Puzzle.array[x+i][y].isWord="both";
+							Puzzle.array[x+i][y].isWord=LabelType.BOTH;
 						}
 				}
 			}	
@@ -115,7 +115,7 @@ public class PlacingWords {
 	
 	
 /*	
-	private static boolean notwEnough(String word, int direction, int x, int y, int iValue)
+	private static boolean notEnough(String word, int direction, int x, int y, int iValue)
 	{
 		System.out.println(iValue);
 		int wordLength=0;
@@ -128,10 +128,10 @@ public class PlacingWords {
 		int verC=0;
 		int verRStart=0, verRLast=0;
 		boolean notFit=false;
-		if(iValue<words.length-1) {
-			for(int k=iValue+1;k<words.length;k++)
+		if(iValue<words.size()-1) {
+			for(int k=iValue+1;k<words.size();k++)
 			{
-				wordLength = words[k].length();
+				wordLength = words.get(k).length();
 					
 
 		System.out.println(word);
@@ -287,6 +287,6 @@ public class PlacingWords {
 
 	}
 
-	*/
+*/	
 		
 }

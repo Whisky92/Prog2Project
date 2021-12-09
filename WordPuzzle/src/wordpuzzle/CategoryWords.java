@@ -23,7 +23,7 @@ public class CategoryWords {
 			Scanner sc5 = new Scanner(fr5);
 			
 			int letterNumb = Puzzle.array.length * Puzzle.array.length;
-			int limit = (int)(letterNumb*0.6);
+			int limit = (int)(letterNumb*0.55);
 			
 			if(Category.str.contains("Gyümölcsök - zöldségek"))
 				FileRead.FileRead(sc1, fr1);
